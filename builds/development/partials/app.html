@@ -1,0 +1,15 @@
+<div class="employeesearch">
+  <div class="card search">
+    <h1 class="page-heading">PartnerComm Directory</h1>
+    <label>search <span *ngIf="query"> for: {{query}}</span></label>
+    <input [(ngModel)]="query" placeholder="Type Employee Name">
+  </div>
+</div>
+
+<ul *ngIf="query" class="employeelist cf">
+  <li (click)="showEmployee(item); query='';" class="employee cf" *ngFor="#item of (employee) | find:query">
+    <employee-item class="content" [employee]=item></employee-item>
+  </li>
+</ul>
+
+<employee-details *ngIf="currentEmployee" [employee]="currentEmployee"></employee-details>
