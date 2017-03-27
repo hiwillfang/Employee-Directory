@@ -1,2 +1,2 @@
-$ cat .gitattributes
+project-docs/* linguist-documentation
 *.rb linguist-language=JavaScript
