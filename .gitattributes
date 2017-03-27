@@ -1,2 +1,2 @@
 project-docs/* linguist-documentation
-*.rb linguist-language=JavaScript
+*.rb linguist-language=css
